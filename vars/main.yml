@@ -41,6 +41,8 @@ _borgbackup_config_defaults:
   exclude_caches: true
   exclude_if_present:
     - .nobackup
+  patterns: []
+  patterns_from: []
   encryption_passphrase: ""
   encryption_passcommand: ""
   remote_path: ""

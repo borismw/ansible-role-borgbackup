@@ -66,6 +66,10 @@
           - /tmp/borgbackup-source
         exclude_patterns:
           - /tmp/borgbackup-source/excluded
+        patterns:
+          - R /etc/sudoers.d
+        patterns_from:
+          - /tmp/patterns_from.txt
         retention:
           keep_hourly: 3
           keep_daily: 7

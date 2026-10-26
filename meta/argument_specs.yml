@@ -166,6 +166,16 @@ argument_specs:
             elements: str
             required: false
             description: Files containing Borg exclude patterns.
+          patterns:
+            type: list
+            elements: str
+            required: false
+            description: Borg include patterns.
+          patterns_from:
+            type: list
+            elements: str
+            required: false
+            description: Files containing Borg include patterns.
           exclude_caches:
             type: bool
             required: false

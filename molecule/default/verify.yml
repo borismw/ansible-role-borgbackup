@@ -35,6 +35,8 @@
           - "borgbackup_rendered_config_data.repositories[0].path == '/tmp/borgbackup-molecule-repo'"
           - "borgbackup_rendered_config_data.source_directories == ['/tmp/borgbackup-source']"
           - "borgbackup_rendered_config_data.exclude_patterns == ['/tmp/borgbackup-source/excluded']"
+          - "borgbackup_rendered_config_data.patterns == ['R /etc/sudoers.d']"
+          - "borgbackup_rendered_config_data.patterns_from == ['/tmp/patterns_from.txt']"
           - "borgbackup_rendered_config_data.encryption_passphrase == 'CHANGEME'"
           - "borgbackup_rendered_config_data.exclude_caches | bool"
           - "borgbackup_rendered_config_data.exclude_if_present == ['.nobackup']"

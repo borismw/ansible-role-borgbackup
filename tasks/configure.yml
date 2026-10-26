@@ -73,6 +73,12 @@
     - when: "{{ _borgbackup_config.exclude_from | length > 0 }}"
       value:
         exclude_from: "{{ _borgbackup_config.exclude_from }}"
+    - when: "{{ _borgbackup_config.patterns | length > 0 }}"
+      value:
+        patterns: "{{ _borgbackup_config.patterns }}"
+    - when: "{{ _borgbackup_config.patterns_from | length > 0 }}"
+      value:
+        patterns_from: "{{ _borgbackup_config.patterns_from }}"
     - when: "{{ _borgbackup_config.remote_path | length > 0 }}"
       value:
         remote_path: "{{ _borgbackup_config.remote_path }}"
