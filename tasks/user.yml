@@ -8,6 +8,7 @@
     - _borgbackup_user.create | bool
 
 - name: Create backup user
+  become: true
   ansible.builtin.user:
     name: "{{ _borgbackup_user.name }}"
     shell: "{{ _borgbackup_user.shell }}"
