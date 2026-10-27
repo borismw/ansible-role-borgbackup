@@ -102,7 +102,7 @@
         ssh_command: "{{ _borgbackup_ssh.command }}"
     - when: "{{ _borgbackup_ssh.create | bool and _borgbackup_ssh.command | length == 0 and _borgbackup_ssh_key_name != 'id_' ~ _borgbackup_ssh.key_type }}"
       value:
-        ssh_command: "ssh -i {{ _borgbackup_ssh_key_path }}"
+        ssh_command: "ssh -i {{ _borgbackup_ssh_key_path | default }}"
   when: item.when | bool
   loop_control:
     label: "{{ item.value.keys() | first }}"
